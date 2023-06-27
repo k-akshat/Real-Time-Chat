@@ -4,19 +4,206 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- custon stylesheet -->
   <link rel="stylesheet" href="/css/styles.css">
+
 </head>
 <body>
   <div class="container">
     <div class="nav-bar">
-      
+      <div class="dropdown">
+        <button class="dropdown-button"><i class="fas fa-bars" id="menu-bar"></i></button>
+        <div class="nav-box">
+          <div class="nav-link">
+            <div class="icon">
+              <a href="#"><i class="fa-solid fa-plus"></i></a>
+            </div>
+            <div class="content" id="side-bar">
+              <a href="#">New Chat</a>
+            </div>
+          </div>
+          <div class="nav-link">
+            <div class="icon">
+              <a href="#"><i class="fa-solid fa-user-group"></i></a>
+            </div>
+            <div class="content" id="side-bar">
+              <a href="#">Contacts</a>
+            </div>
+          </div>
+          <div class="nav-link">
+            <div class="icon">
+              <a href="#"><i class="fa-solid fa-user"></i></a>
+            </div>
+            <div class="content" id="side-bar">
+              <a href="#">Profile</a>
+            </div>
+          </div>
+          <div class="nav-link">
+            <div class="icon">
+              <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+            <div class="content" id="side-bar">
+              <a href="#">Log Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="recent-chats">
-
+      <div class="search-bar">
+        <form action="/" method="post">
+          <input type="text" class="search-text" placeholder="Search Friend">
+          <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <h3 class="heading">Chats</h3>
+      <div class="chats">
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-1</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-1</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-1</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-1</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-1</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-1</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-2</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">  
+            <p>Friend-3</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-4</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-5</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-6</p>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="profile">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <p>Friend-7</p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="active-chat">
-
+      <div class="heading">
+        <div class="icon">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="name">
+          <h3>Friend</h3>
+        </div>
+      </div>
+      <div class="msgs">
+        <div class="msg-sent msg">
+          <h5 class="writer">You</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
+        </div>
+        <div class="msg-recieved msg">
+          <h5 class="writer">Friend</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
+        </div>
+        <div class="msg-sent msg">
+          <h5 class="writer">You</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
+        </div>
+        <div class="msg-recieved msg">
+          <h5 class="writer">Friend</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
+        </div>
+        <div class="msg-sent msg">
+          <h5 class="writer">You</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
+        </div>
+        <div class="msg-recieved msg">
+          <h5 class="writer">Friend</h5>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
+        </div>
+      </div>
+      <div class="new-msg">
+        <form action="/" method="post">
+          <input type="text" class="search-text" placeholder="Type a message">
+          <button type="submit" class="search-icon"><i class="fa-solid fa-plus"></i></button>
+        </form>
+      </div>
     </div>
   </div>
+
+  <script src="/js/script.js"></script>
 </body>
 </html>
