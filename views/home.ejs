@@ -1,209 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-  <!-- Font Awesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  <!-- custon stylesheet -->
-  <link rel="stylesheet" href="/css/styles.css">
+    <!-- custon stylesheet -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
 
-</head>
-<body>
-  <div class="container">
-    <div class="nav-bar">
-      <div class="dropdown">
-        <button class="dropdown-button"><i class="fas fa-bars" id="menu-bar"></i></button>
-        <div class="nav-box">
-          <div class="nav-link">
-            <div class="icon">
-              <a href="#"><i class="fa-solid fa-plus"></i></a>
+    <div class="container">
+
+      <!-- Nav bar section starts -->
+
+      <div class="nav-bar">
+        <div class="dropdown">
+          <button class="dropdown-button">
+            <i class="fas fa-bars" id="menu-bar"></i>
+          </button>
+          <div class="nav-box">
+            <div class="nav-link active rec-chats">
+              <div class="icon">
+                <a href="/"><i class="fa-solid fa-comment"></i></a>
+              </div>
+              <div class="content" id="side-bar">
+                <a href="/">Chats</a>
+              </div>
             </div>
-            <div class="content" id="side-bar">
-              <a href="#">New Chat</a>
+            <div class="nav-link new-chat-btn">
+              <div class="icon">
+                <a href="#"><i class="fa-solid fa-plus"></i></a>
+              </div>
+              <div class="content" id="side-bar">
+                <a href="#">New Chat</a>
+              </div>
             </div>
-          </div>
-          <div class="nav-link">
-            <div class="icon">
-              <a href="#"><i class="fa-solid fa-user-group"></i></a>
+            <div class="nav-link contacts">
+              <div class="icon">
+                <a href="#"><i class="fa-solid fa-user-group"></i></a>
+              </div>
+              <div class="content" id="side-bar">
+                <a href="#">Contacts</a>
+              </div>
             </div>
-            <div class="content" id="side-bar">
-              <a href="#">Contacts</a>
+            <div class="nav-link profile">
+              <div class="icon">
+                <a href=""><i class="fa-solid fa-user"></i></a>
+              </div>
+              <div class="content" id="side-bar">
+                <a href="">Profile</a>
+              </div>
             </div>
-          </div>
-          <div class="nav-link">
-            <div class="icon">
-              <a href="#"><i class="fa-solid fa-user"></i></a>
-            </div>
-            <div class="content" id="side-bar">
-              <a href="#">Profile</a>
-            </div>
-          </div>
-          <div class="nav-link">
-            <div class="icon">
-              <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
-            </div>
-            <div class="content" id="side-bar">
-              <a href="#">Log Out</a>
+            <div class="nav-link">
+              <div class="icon">
+                <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+              </div>
+              <div class="content" id="side-bar">
+                <a href="#">Log Out</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="recent-chats">
-      <div class="search-bar">
-        <form action="/" method="post">
-          <input type="text" class="search-text" placeholder="Search Friend">
-          <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+
+      <!-- Nav bar section ends -->
+
+      <!-- Recent chats section starts -->
+
+      <div class="recent-chats left-div active">
+        <div class="search-bar">
+          <form action="/" method="post">
+            <input
+              type="text"
+              class="search-text"
+              placeholder="Search Friend"
+            />
+            <button type="submit" class="search-icon">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <h3 class="heading">Chats</h3>
+        <div class="chats">
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-2</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-3</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-4</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-5</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-6</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recents chats section ends -->
+
+      <!-- New chat section starts -->
+
+      <div class="new-chat left-div">
+        <div class="heading">
+          <p>Find new friend</p>
+        </div>
+        <form action="/" method="post" class="add-friend">
+          <input type="email" name="email" class="friend-email" placeholder="Enter friend's Email">
+          <button type="submit" class="find-friend">Add Friend</button>
         </form>
-      </div>
-      <h3 class="heading">Chats</h3>
-      <div class="chats">
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-1</p>
-          </div>
+        <div class="line">
+          <div class="hori-line"></div>
+          <span>or</span>
+          <div class="hori-line"></div>
         </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-1</p>
-          </div>
-        </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-1</p>
-          </div>
-        </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-1</p>
-          </div>
-        </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-1</p>
-          </div>
-        </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-1</p>
-          </div>
-        </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-2</p>
-          </div>
-        </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">  
-            <p>Friend-3</p>
-          </div>
-        </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-4</p>
-          </div>
-        </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-5</p>
-          </div>
-        </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-6</p>
-          </div>
-        </div>
-        <div class="chat">
-          <div class="profile">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div class="name">
-            <p>Friend-7</p>
-          </div>
+        <div class="new-group">
+          <button class="create-grp">Create a New Group</button>
         </div>
       </div>
-    </div>
-    <div class="active-chat">
-      <div class="heading">
-        <div class="icon">
-          <i class="fa-solid fa-user"></i>
-        </div>
-        <div class="name">
-          <h3>Friend</h3>
-        </div>
-      </div>
-      <div class="msgs">
-        <div class="msg-sent msg">
-          <h5 class="writer">You</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
-        </div>
-        <div class="msg-recieved msg">
-          <h5 class="writer">Friend</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
-        </div>
-        <div class="msg-sent msg">
-          <h5 class="writer">You</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
-        </div>
-        <div class="msg-recieved msg">
-          <h5 class="writer">Friend</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
-        </div>
-        <div class="msg-sent msg">
-          <h5 class="writer">You</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
-        </div>
-        <div class="msg-recieved msg">
-          <h5 class="writer">Friend</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit similique officia voluptas laboriosam quidem exercitationem corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias sed sit voluptatem a voluptatibus ducimus corrupti officia quisquam quas odio fuga aperiam debitis, expedita, aliquam perferendis eligendi. Beatae mollitia eveniet quisquam asperiores reiciendis nesciunt dicta quaerat, tenetur nemo ex dolorum.</p>
-        </div>
-      </div>
-      <div class="new-msg">
-        <form action="/" method="post">
-          <input type="text" class="search-text" placeholder="Type a message">
-          <button type="submit" class="search-icon"><i class="fa-solid fa-plus"></i></button>
-        </form>
-      </div>
-    </div>
-  </div>
 
-  <script src="/js/script.js"></script>
-</body>
+      <!-- New chat section ends -->
+
+      <!-- New Group section starts -->
+
+      <div class="new-grp left-div">
+        <div class="input-bar">
+          <form action="/" method="post">
+            <input
+              type="text"
+              class="grp-name input"
+              placeholder="Enter Group Name"
+            />
+            <input
+              type="text"
+              class="search-text input"
+              placeholder="Add Friend"
+            />
+            <button class="search-icon">
+              <i class="fas fa-search"></i>
+            </button>
+            <button type="submit" class="create-grp-btn"><i class="fa-solid fa-plus"></i> Create Group</butto>
+          </form>
+        </div>
+        <h3 class="heading">Create New Group</h3>
+        <div class="all-contacts">
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-2</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-3</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-4</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-5</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-6</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- New group section ends -->
+
+      <!-- Contact lists section starts -->
+
+      <div class="contact-list left-div">
+        <div class="search-bar">
+          <form action="/" method="post">
+            <input
+              type="text"
+              class="search-text"
+              placeholder="Find Friend"
+            />
+            <button type="submit" class="search-icon">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <h3 class="heading">All Contacts</h3>
+        <div class="all-contacts">
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-1</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-2</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-3</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-4</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-5</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-6</p>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="profile">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="name">
+              <p>Friend-7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact lists section ends -->
+
+      <!-- User profile section starts -->
+
+      <div class="user-profile left-div">
+        <div class="img">
+          <img src="/images/boy.png" alt="user-image" />
+        </div>
+        <div class="content">
+          <div class="name">
+            <h3>Username</h3>
+          </div>
+          <div class="data about">
+            <p>
+              <span>About:</span> <br>Lorem ipsum dolor sit amet consectetur adipisicing
+            </p>
+          </div>
+          <div class="data last-seen">
+            <p><span>Last seen:</span> <br>22:40 yesterday</p>
+          </div>
+          <div class="data phone">
+            <p><span>Phone:</span> <br>9369878595</p>
+          </div>
+          <div class="data email">
+            <p><span>Email:</span> <br>abcdefgh@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Profile section ends -->
+      
+      <!-- Active chats section starts -->
+      
+      <div class="active-chat">
+        <div class="heading">
+          <div class="icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="name">
+            <h3>Friend</h3>
+          </div>
+        </div>
+        <div class="msgs">
+          <div class="msg-sent msg">
+            <h5 class="writer">You</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              similique officia voluptas laboriosam quidem exercitationem
+              corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Molestias sed sit voluptatem a
+              voluptatibus ducimus corrupti officia quisquam quas odio fuga
+              aperiam debitis, expedita, aliquam perferendis eligendi. Beatae
+              mollitia eveniet quisquam asperiores reiciendis nesciunt dicta
+              quaerat, tenetur nemo ex dolorum.
+            </p>
+          </div>
+          <div class="msg-recieved msg">
+            <h5 class="writer">Friend</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              similique officia voluptas laboriosam quidem exercitationem
+              corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Molestias sed sit voluptatem a
+              voluptatibus ducimus corrupti officia quisquam quas odio fuga
+              aperiam debitis, expedita, aliquam perferendis eligendi. Beatae
+              mollitia eveniet quisquam asperiores reiciendis nesciunt dicta
+              quaerat, tenetur nemo ex dolorum.
+            </p>
+          </div>
+          <div class="msg-sent msg">
+            <h5 class="writer">You</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              similique officia voluptas laboriosam quidem exercitationem
+              corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Molestias sed sit voluptatem a
+              voluptatibus ducimus corrupti officia quisquam quas odio fuga
+              aperiam debitis, expedita, aliquam perferendis eligendi. Beatae
+              mollitia eveniet quisquam asperiores reiciendis nesciunt dicta
+              quaerat, tenetur nemo ex dolorum.
+            </p>
+          </div>
+          <div class="msg-recieved msg">
+            <h5 class="writer">Friend</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              similique officia voluptas laboriosam quidem exercitationem
+              corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Molestias sed sit voluptatem a
+              voluptatibus ducimus corrupti officia quisquam quas odio fuga
+              aperiam debitis, expedita, aliquam perferendis eligendi. Beatae
+              mollitia eveniet quisquam asperiores reiciendis nesciunt dicta
+              quaerat, tenetur nemo ex dolorum.
+            </p>
+          </div>
+          <div class="msg-sent msg">
+            <h5 class="writer">You</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              similique officia voluptas laboriosam quidem exercitationem
+              corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Molestias sed sit voluptatem a
+              voluptatibus ducimus corrupti officia quisquam quas odio fuga
+              aperiam debitis, expedita, aliquam perferendis eligendi. Beatae
+              mollitia eveniet quisquam asperiores reiciendis nesciunt dicta
+              quaerat, tenetur nemo ex dolorum.
+            </p>
+          </div>
+          <div class="msg-recieved msg">
+            <h5 class="writer">Friend</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              similique officia voluptas laboriosam quidem exercitationem
+              corporis, assumenda illo eum. Odio? Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Molestias sed sit voluptatem a
+              voluptatibus ducimus corrupti officia quisquam quas odio fuga
+              aperiam debitis, expedita, aliquam perferendis eligendi. Beatae
+              mollitia eveniet quisquam asperiores reiciendis nesciunt dicta
+              quaerat, tenetur nemo ex dolorum.
+            </p>
+          </div>
+        </div>
+        <div class="new-msg">
+          <form action="/" method="post">
+            <input
+              type="text"
+              class="search-text"
+              placeholder="Type a message"
+            />
+            <button type="submit" class="search-icon">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Active chats section ends -->
+
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
 </html>
