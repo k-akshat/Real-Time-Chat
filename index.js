@@ -3,6 +3,8 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
 const messageRoutes = require("./routes/messagesRoutes");
+const cookieParser = require("cookie-parser");
+// const bodyParser = require("body-parser");
 
 const app = express();
 const socket = require("socket.io");
@@ -10,10 +12,9 @@ const socket = require("socket.io");
 require("dotenv").config();
 
 app.use(cors());
+// app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use("/api/auth", userRoutes);
-app.use("/api/message", messageRoutes);
 
 mongoose
   .connect(process.env.MONGO_URL, {
@@ -51,4 +52,44 @@ io.on("connection", (socekt) => {
       socket.to(sendUserSocket).emit("msg-recieve", data.message);
     }
   });
+});
+
+
+
+
+
+// app.use(
+//   sessions({
+//     secret: "afdhsfhsdk",
+//     saveUninitialized: true,
+//     cookie: { maxAge: oneDay },
+//     resave: false,
+//   })
+// );
+
+
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+app.use(cookieParser());
+app.set("view engine", "ejs");
+
+
+
+app.get('/',(req,res)=>{
+  res.render('home');
+});
+
+
+app.use("/api/auth", userRoutes);
+app.use("/api/message", messageRoutes);
+
+
+app.listen(process.env.PORT || 3000, function (req, res) {
+  console.log("hello world");
 });
