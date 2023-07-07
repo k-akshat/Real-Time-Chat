@@ -4,9 +4,11 @@ const mongoose = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
 const messageRoutes = require("./routes/messagesRoutes");
 const cookieParser = require("cookie-parser");
-// const bodyParser = require("body-parser");
+const session = require('express-session')
+
 
 const app = express();
+app.use(express.static("public"));
 const socket = require("socket.io");
 
 require("dotenv").config();
@@ -56,16 +58,17 @@ io.on("connection", (socekt) => {
 
 
 
+// creating 24 hours from milliseconds
+const oneDay = 1000 * 60 * 60 * 24;
 
-
-// app.use(
-//   sessions({
-//     secret: "afdhsfhsdk",
-//     saveUninitialized: true,
-//     cookie: { maxAge: oneDay },
-//     resave: false,
-//   })
-// );
+app.use(
+  session({
+    secret: "afdhsfhsdk",
+    saveUninitialized: true,
+    cookie: { maxAge: oneDay },
+    resave: false,
+  })
+);
 
 
 app.use(function (req, res, next) {
@@ -82,8 +85,15 @@ app.set("view engine", "ejs");
 
 
 app.get('/',(req,res)=>{
-  res.render('home');
+  if(req.session.userId){
+    res.render('home');
+  }
+  else {
+    res.send('hello');
+  }
 });
+
+
 
 
 app.use("/api/auth", userRoutes);
