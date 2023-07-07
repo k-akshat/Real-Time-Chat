@@ -40,6 +40,179 @@ html {
   border-radius: 5px;
   height: 1px;
 }
+/* Login Signup page css */
+
+.sign-class {
+  width: 90%;
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-green);
+  padding-top: 50px;
+  padding-bottom: 60px;
+  padding-left: 70px;
+  padding-right: 70px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.sign-class a:hover {
+  text-decoration: underline;
+}
+
+.sign-head {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--green);
+  position: relative;
+  pointer-events: none;
+}
+
+.input-class {
+  width: 100%;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.input-field-class {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+i {
+  padding-left: 16px;
+  color: var(--green);
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.error p {
+  color: red;
+  font-size: 12px;
+}
+
+.error i {
+  color: red;
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+.invalid .error {
+  display: flex;
+}
+
+.invalid .input-class {
+  width: 100%;
+  border: solid;
+  border-width: 1px;
+  border-color: red;
+}
+
+.forgot-pass {
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.button-class {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--green);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--box-shadow);
+  transition: box-shadow 0.15s;
+}
+
+.button-class:hover {
+  box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.15);
+}
+
+.eye {
+  color: var(--green);
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.oldacc {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.line-class {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background-color: var(--green);
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 30px;
+}
+
+.line-class::before {
+  content: "Or";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(247, 255, 229);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.google-class button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color:#fff;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 6px;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.15s;
+}
+
+.google-class button:hover {
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.15);
+}
+
+.google-class img {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+}
+
 
 .container {
   display: flex;
@@ -688,7 +861,7 @@ html {
   color: #fff;
 }
 
-.new-grp .create-grp-btn{
+.new-grp .create-grp-btn {
   background-color: var(--green);
   color: #fff;
   border-radius: 0.7rem;
@@ -701,6 +874,7 @@ html {
   left: 4.4%;
 }
 
-.new-grp .create-grp-btn:hover{
+.new-grp .create-grp-btn:hover {
   cursor: pointer;
 }
+

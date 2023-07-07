@@ -1,11 +1,11 @@
-//Nav bar appears 
+//Nav bar appears
 
 var dropdown = document.querySelector(".dropdown-button");
-dropdown.addEventListener("click",()=>{
+dropdown.addEventListener("click", () => {
   var sideBarList = document.querySelectorAll("#side-bar");
-  sideBarList.forEach((item)=>{
-    item.classList.toggle('active');
-  })
+  sideBarList.forEach((item) => {
+    item.classList.toggle("active");
+  });
 });
 
 //Recent Chat appears
@@ -68,10 +68,10 @@ profilebtn.addEventListener("click", (event) => {
   sideBarList.forEach((item) => {
     item.classList.remove("active");
   });
-  var leftDivs = document.querySelectorAll('.left-div');
-  leftDivs.forEach((div)=>{
-    div.classList.remove('active');
-  })
+  var leftDivs = document.querySelectorAll(".left-div");
+  leftDivs.forEach((div) => {
+    div.classList.remove("active");
+  });
   var userProfile = document.querySelector(".user-profile");
   userProfile.classList.toggle("active");
 });
@@ -85,27 +85,27 @@ contactsBtn.addEventListener("click", (event) => {
   sideBarList.forEach((item) => {
     item.classList.remove("active");
   });
-  var leftDivs = document.querySelectorAll('.left-div');
-  leftDivs.forEach((div)=>{
-    div.classList.remove('active');
-  })
+  var leftDivs = document.querySelectorAll(".left-div");
+  leftDivs.forEach((div) => {
+    div.classList.remove("active");
+  });
   var contactList = document.querySelector(".contact-list");
   contactList.classList.toggle("active");
 });
 
 //Selected chat in recent chats
 
-const chats = document.querySelectorAll('.chat');
-chats.forEach((chat)=>{
-  chat.addEventListener('click', (event)=>{
-    chats.forEach((otherchat)=>{
-      if(otherchat !== chat && otherchat.classList.contains('active')){
-        otherchat.classList.remove('active');
+const chats = document.querySelectorAll(".chat");
+chats.forEach((chat) => {
+  chat.addEventListener("click", (event) => {
+    chats.forEach((otherchat) => {
+      if (otherchat !== chat && otherchat.classList.contains("active")) {
+        otherchat.classList.remove("active");
       }
-    })
-    chat.classList.toggle('active');
-  })
-})
+    });
+    chat.classList.toggle("active");
+  });
+});
 
 // Select members in group
 
@@ -118,14 +118,14 @@ friends.forEach((friend) => {
 
 // Nav bar items selected
 
-const navItems = document.querySelectorAll('.nav-link');
-navItems.forEach((item)=>{
-  item.addEventListener('click', (event)=>{
-    navItems.forEach((otheritem)=>{
-      if(otheritem !== item && otheritem.classList.contains('active')){
-        otheritem.classList.remove('active');
+const navItems = document.querySelectorAll(".nav-link");
+navItems.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    navItems.forEach((otheritem) => {
+      if (otheritem !== item && otheritem.classList.contains("active")) {
+        otheritem.classList.remove("active");
       }
-    })
-    item.classList.add('active');
-  })
-})
+    });
+    item.classList.add("active");
+  });
+});
