@@ -19,6 +19,10 @@ module.exports.register = async (req, res, next) => {
       passwaord: hashedPassword,
     });
     delete user.password;
+    // session
+    console.log(user.id);
+    // req.session.userId=user.id;
+
     return res.json({ status: true, user });
   } catch (ex) {
     next(ex);
@@ -32,12 +36,18 @@ module.exports.login = async (req, res, next) => {
     if (!user) {
       return res.json({ msg: "Incorrect username or password", status: false });
     }
-    const isPasswordValid = await bcrypt.compare(password, user.password);
-    if (!isPasswordValid) {
-      return res.json({ msg: "Incorrect username or password", status: false });
-    }
+    await bcrypt.compare(password, user.password,(res2 , error)=>{
+      if(res2){
+        req.session.userId=user._id;
+       return res.json({user:user,status:true});
+      }
+      else {
+        return res.json({ msg: "Incorrect username or password", status: false });
+      }
+    });
+    
     delete user.password;
-    return res.json({ status: true, user });
+    // console.log(user._id);
   } catch (ex) {
     next(ex);
   }

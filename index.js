@@ -19,9 +19,9 @@ app.use(express.json());
 
 
 mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+  .connect("mongodb+srv://rp8550495:real-time-chat@cluster0.ysxboqk.mongodb.net/?retryWrites=true&w=majority", {
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
   })
   .then(() => {
     console.log("DB connection established");
@@ -89,11 +89,28 @@ app.get('/',(req,res)=>{
     res.render('home');
   }
   else {
-    res.send('hello');
+    res.redirect('/login');
   }
 });
 
 
+app.get('/login',(req,res)=>{
+  if(req.session.userId){
+    res.redirect('/');
+  }
+  else {
+    res.render('login');
+  }
+});
+
+app.get('/signup',(req,res)=>{
+  if(req.session.userId){
+    res.redirect('/');
+  }
+  else {
+    res.render('signup');
+  }
+});
 
 
 app.use("/api/auth", userRoutes);
